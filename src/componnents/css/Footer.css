@@ -1,0 +1,32 @@
+#footer {
+  background-color: #09163a;
+}
+
+.container .first {
+  border-right: 0.5rem solid gold;
+}
+.container .footerh2 {
+  color: gold;
+}
+
+li {
+  color: white;
+  font-size: larger;
+}
+
+.footerrh2 {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: gold;
+}
+.footericon1 {
+  font-size: 2.7rem;
+  margin-right: 1rem;
+  color: rgba(255, 215, 0, 0.9);
+}
+.footericon2 {
+  margin-right: 1rem;
+  font-size: 2.7rem;
+  color: rgba(255, 215, 0, 0.9);
+}

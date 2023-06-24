@@ -1,0 +1,63 @@
+.hero {
+  padding-top: 3rem;
+  padding-bottom: 9.5rem;
+  position: relative;
+}
+
+h2 {
+  font-family: "Averia Serif Libre", cursive;
+}
+
+.lead {
+  font-family: "Averia Serif Libre", cursive;
+
+  color: white;
+}
+.right img {
+  height: 269px;
+  width: 437px;
+}
+
+@media screen and (max-width: 991px) {
+  .right img {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: 220px;
+    width: 320px;
+  }
+}
+
+/* single wave */
+.custom-shape-divider-bottom-1687165424 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+.custom-shape-divider-bottom-1687165424 svg {
+  position: relative;
+  display: block;
+  width: calc(136% + 1.3px);
+  height: 120px;
+}
+
+.custom-shape-divider-bottom-1687165424 .shape-fill {
+  fill: #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  .hero-left {
+    margin-top: 4rem;
+  }
+  .hero-left p {
+    margin-top: 2rem;
+  }
+  .hero-left button {
+    margin-top: 1rem;
+  }
+}

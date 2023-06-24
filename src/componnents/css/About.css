@@ -1,0 +1,39 @@
+.about h1 {
+  font-family: var(--dancingfont);
+  padding-bottom: 1rem;
+}
+
+.card {
+  padding: 1rem 0;
+  border: 5px solid #4a8fff;
+  border-radius: 20px;
+  text-transform: capitalize;
+  width: 16rem;
+  box-shadow: 15px 22px 21px gray;
+}
+.card h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.card img {
+  height: 125px;
+  width: 125px;
+  margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .card {
+    height: 17rem;
+    width: 15rem;
+  }
+  .card h5 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .card img {
+    height: 105px;
+    width: 105px;
+    margin: auto;
+  }
+}

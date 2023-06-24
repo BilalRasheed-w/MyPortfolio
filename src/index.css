@@ -1,0 +1,9 @@
+:root {
+  --dancingfont: "Dancing Script", cursive;
+  --secondary-font: "Cormorant Garamond", serif;
+  --primary-color: gold;
+}
+
+body {
+  background-color: #dbe8fa;
+}

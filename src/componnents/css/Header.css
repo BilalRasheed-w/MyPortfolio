@@ -1,0 +1,58 @@
+#header {
+  background: linear-gradient(
+    109.6deg,
+    rgba(39, 142, 255, 1) 11.2%,
+    rgba(98, 113, 255, 0.78) 100.2%
+  );
+  position: relative;
+}
+#header a {
+  color: white;
+}
+
+/* single wave */
+.custom-shape-divider-bottom-1687438453 {
+  position: absolute;
+  bottom: -0.5%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1687438453 svg {
+  position: relative;
+  display: block;
+  width: calc(133% + 1.3px);
+  height: 108px;
+}
+
+.custom-shape-divider-bottom-1687438453 .shape-fill {
+  /* fill: white; */
+  fill: #dbe8fa;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1687438453 svg {
+      width: calc(150% + 1.3px);
+      height: 62px;
+  }
+}
+
+.mainicon1 {
+  position: absolute;
+  top: 4%;
+  left: 84%;
+  color: gold;
+  font-size: 3rem;
+}
+.mainicon2 {
+  position: absolute;
+  top: 4%;
+  left: 89.3%;
+  color: gold;
+  font-size: 3rem;
+}
+

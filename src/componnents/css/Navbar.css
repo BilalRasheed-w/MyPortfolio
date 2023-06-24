@@ -1,0 +1,25 @@
+.brand {
+  font-family: "Dancing Script", cursive;
+}
+
+a {
+  font-family: "Averia Gruesa Libre";
+}
+
+@media screen and (min-width: 992px) {
+  .nav-link:hover {
+    border-bottom: 2px solid gold;
+  }
+  .navbar-nav {
+    margin-left: 12rem;
+  }
+}
+
+
+
+
+
+
+
+
+
