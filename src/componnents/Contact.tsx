@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 
 import { ToastContainer, toast } from "react-toastify";
 
@@ -20,39 +20,43 @@ const animations = {
 };
 
 export default function Contact() {
-  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(name, email, message);
 
-    if (
-      form.current.name.value.trim() === "" ||
-      form.current.email.value.trim() === "" ||
-      form.current.message.value.trim() === ""
-    ) {
-      toast.error("Fields Cannot Be Empty");
-      return
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+      toast.error("Pls fill all the fields");
+      return;
     }
 
+    const maildata = {
+      name,
+      email,
+      message,
+    };
+
     emailjs
-      .sendForm(
+      .send(
         "service_uglm9qb",
         "template_pdh9td3",
-        form.current,
+        maildata,
         "MaBzrEgFDiRDKcvl6"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("msg sent");
-          e.target.reset();
-          toast.success("Message Sent");
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error("Some Error Occured");
-        }
-      );
+      .then((result) => {
+        console.log(result);
+        toast.success("Message Sent");
+      })
+      .catch((error) => {
+        console.log("error occured", error);
+        toast.error("some error occured");
+      });
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -79,16 +83,39 @@ export default function Contact() {
             {/* form  */}
             <div className="col-md-6 contact-right   ">
               <form
-                ref={form}
                 onSubmit={sendEmail}
                 className=" h-100 w-100  d-flex flex-column"
               >
                 <h2>get in touch . . .</h2>
                 <i className="fa-solid fa-user   icon1  text-white  "></i>
-                <input name="name" type="text" placeholder="Your name" />
+                <input
+                  value={name}
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
                 <i className="fa-solid fa-envelope  text-white  icon2 fa-xl"></i>
-                <input name="email" type="email" id="" placeholder="Email" />
-                <textarea name="message" placeholder="message"></textarea>
+                <input
+                  value={email}
+                  name="email"
+                  type="email"
+                  id=""
+                  placeholder="Email"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+                <textarea
+                  value={message}
+                  name="message"
+                  placeholder="message"
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                ></textarea>
                 <motion.button
                   variants={animations}
                   whileHover="buttonHover"
